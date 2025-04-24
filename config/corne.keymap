@@ -42,7 +42,7 @@
             bindings = <
 &trans  &kp Q           &kp W           &kp F               &kp P             &kp B              &kp J         &kp L              &kp U                &kp Y            &kp SINGLE_QUOTE     &trans
 &trans  &mt LEFT_GUI A  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G              &kp M         &mt RIGHT_SHIFT N  &mt RIGHT_CONTROL E  &mt RIGHT_ALT I  &mt RIGHT_GUI O      &trans
-&trans  &kp Z           &kp X           &kp C               &kp D             &kp V              &kp K         &kp H              &kp COMMA            &kp DOT          &mt SLASH SEMICOLON  &trans
+&trans  &kp X           &kp C           &kp D               &kp V             &kp Z              &kp K         &kp H              &kp COMMA            &kp DOT          &mt SLASH SEMICOLON  &trans
                                         &kp TAB             &lt 1 SPACE       &lt 2 BACKSPACE    &lt 2 DELETE  &lt 1 ENTER        &mo 3
             >;
         };
