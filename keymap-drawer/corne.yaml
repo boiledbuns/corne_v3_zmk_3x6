@@ -26,11 +26,11 @@ layers:
   - {t: O, h: RIGHT GUI}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Z
   - X
   - C
   - D
   - V
+  - Z
   - K
   - H
   - {t: ',', s: <}
