@@ -12,20 +12,20 @@ layers:
   - U
   - Y
   - {t: '''', s: '"'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&td_quotes'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: R, h: '$$mdi:apple-keyboard-option$$'}
   - {t: S, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
+  - T
   - G
   - M
-  - {t: N, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: E, h: '$$mdi:apple-keyboard-control$$'}
+  - N
+  - E
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: O, h: RIGHT GUI}
+  - {t: O, h: ;}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Colemak_dh_rs, h: toggle}
   - X
   - C
   - D
@@ -35,14 +35,14 @@ layers:
   - H
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: ;, h: /, s: ':'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:keyboard-tab$$
+  - {t: /, s: '?'}
+  - {t: mouse, h: toggle}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:keyboard-space$$', h: symnum}
   - {t: '$$mdi:backspace$$', h: fn}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: fn}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: mouse}
   - {t: '$$mdi:keyboard-return$$', h: symnum}
-  - abc
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-shift$$'}
   symnum:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', h: '~', s: '~'}
@@ -55,7 +55,7 @@ layers:
   - {t: '8', s: '*'}
   - {t: '9', s: (}
   - '&'
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '@', h: LGUI}
   - {t: _, h: '$$mdi:apple-keyboard-option$$'}
@@ -67,7 +67,7 @@ layers:
   - '5'
   - '6'
   - '|'
-  - PG UP
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - ^
   - '!'
@@ -79,7 +79,7 @@ layers:
   - '2'
   - {t: '3', h: .}
   - {t: \, s: '|'}
-  - PG DN
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -87,19 +87,19 @@ layers:
   - {t: '>', type: held alternate}
   - {t: '0', s: )}
   fn:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - BT CLR ALL
   - F1
   - F2
   - F3
   - F4
   - INS
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - HOME
   - PgDn
   - PG UP
+  - END
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {h: '$$mdi:arrow-down-bold$$', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '1', s: '$$mdi:bluetooth-connect$$'}
   - {t: F5, h: LGUI}
   - {t: F6, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F7, h: '$$mdi:apple-keyboard-control$$'}
@@ -111,7 +111,7 @@ layers:
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:bluetooth-off$$
+  - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - F9
   - F10
   - F11
@@ -126,52 +126,102 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  abc:
+  - {t: '$$mdi:transfer$$', type: trans}
+  mouse:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&mkp MB4'
+  - '&mkp MB5'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:pan-down$$
+  - $$mdi:pan-up$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:mouse-scroll-wheel$$
+  - $$mdi:mouse-right-click-outline$$
+  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  Colemak_dh_rs:
   - {t: '$$mdi:transfer$$', type: trans}
   - Q
   - W
-  - E
-  - R
-  - T
-  - Y
-  - U
-  - I
-  - O
+  - F
   - P
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - B
+  - J
+  - L
+  - U
+  - Y
+  - {t: '''', s: '"'}
+  - '&td_quotes'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: R, h: '$$mdi:apple-keyboard-control$$'}
+  - T
   - G
-  - H
-  - {t: J, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: RIGHT GUI, s: ':'}
-  - {t: '''', s: '"'}
-  - '&td0'
-  - Z
+  - M
+  - N
+  - E
+  - {t: I, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: O, h: ;}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Colemak_dh, h: toggle}
   - X
   - C
+  - D
   - V
-  - B
-  - N
-  - M
+  - Z
+  - K
+  - H
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-tab$$
+  - {t: mouse, h: toggle}
+  - {t: '$$mdi:keyboard-tab$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:keyboard-space$$', h: symnum}
   - {t: '$$mdi:backspace$$', h: fn}
-  - {t: '$$mdi:backspace-reverse-outline$$', h: fn}
+  - {t: '$$mdi:backspace-reverse-outline$$', h: mouse}
   - {t: '$$mdi:keyboard-return$$', h: symnum}
-  - {t: abc, type: held}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:apple-keyboard-shift$$'}
 combos:
 - p: [2, 3]
   k: $$mdi:keyboard-esc$$
+- p: [26, 27]
+  k: '&m_arr'
+  l: [symnum]
+- p: [8, 9]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+- p: [32, 33]
+  k: $$mdi:backspace-reverse-outline$$
