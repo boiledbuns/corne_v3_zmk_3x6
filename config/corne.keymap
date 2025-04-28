@@ -19,13 +19,6 @@
 
 / {
     behaviors {
-        td0: td0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD0";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-        };
-
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
@@ -65,12 +58,6 @@
             key-positions = <2 3>;
         };
 
-        arr {
-            bindings = <&m_arr>;
-            key-positions = <26 27 37>;
-            layers = <1>;
-        };
-
         Bksps {
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
@@ -94,21 +81,6 @@
         vim_k {
             bindings = <&kp K>;
             key-positions = <21 20>;
-        };
-
-        Enter {
-            bindings = <&kp ENTER>;
-            key-positions = <16 19>;
-        };
-    };
-
-    macros {
-        m_arr: arrf {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp GREATER_THAN>, <&macro_tap>;
-
-            label = "ARRF";
         };
     };
 
