@@ -154,10 +154,5 @@
             if-layers = <1 2>;
             then-layer = <3>;
         };
-
-        l_mouse2 {
-            if-layers = <2 1>;
-            then-layer = <3>;
-        };
     };
 };
