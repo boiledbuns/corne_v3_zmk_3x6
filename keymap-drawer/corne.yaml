@@ -78,13 +78,13 @@ layers:
   - '1'
   - '2'
   - {t: '3', h: .}
-  - {t: \, s: '|'}
+  - {t: '0', h: \, s: )}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '>', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '0', s: )}
   fn:
   - {t: '$$mdi:transfer$$', type: trans}
