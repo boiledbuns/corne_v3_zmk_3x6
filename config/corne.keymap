@@ -53,16 +53,7 @@
             #binding-cells = <0>;
             bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>, <&kp GRAVE>;
 
-            tapping-term-ms = <300>;
-        };
-
-        shft: shft {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SHFT";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <250>;
         };
     };
 
@@ -76,7 +67,7 @@
 
         arr {
             bindings = <&m_arr>;
-            key-positions = <26 27>;
+            key-positions = <26 27 37>;
             layers = <1>;
         };
 
@@ -88,6 +79,26 @@
         Delete {
             bindings = <&kp DELETE>;
             key-positions = <32 33>;
+        };
+
+        ltg_mouse {
+            bindings = <&tog 3>;
+            key-positions = <25 34>;
+        };
+
+        vim_j {
+            bindings = <&kp J>;
+            key-positions = <19 20>;
+        };
+
+        vim_k {
+            bindings = <&kp K>;
+            key-positions = <21 20>;
+        };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <16 19>;
         };
     };
 
@@ -106,10 +117,10 @@
 
         Colemak_dh {
             bindings = <
-&trans  &kp Q             &kp W             &kp F          &kp P        &kp B              &kp J         &kp L        &kp U               &kp Y              &kp SINGLE_QUOTE   &td_quotes
-&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT R  &hmr LCTRL S   &kp T        &kp G              &kp M         &kp N        &kp E               &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
-&to 4   &kp X             &kp C             &kp D          &kp V        &kp Z              &kp K         &kp H        &kp COMMA           &kp DOT            &kp SLASH          &tog 3
-                                            &mt LCTRL TAB  &lt 1 SPACE  &lt 2 BACKSPACE    &lt 3 DELETE  &lt 1 ENTER  &shft RSHFT RSHIFT
+&trans  &kp Q             &kp W             &kp F   &kp P        &kp B            &kp J           &kp L        &kp U      &kp Y              &td_quotes         &trans
+&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT R  &kp S   &kp T        &kp G            &kp M           &kp N        &kp E      &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
+&trans  &kp X             &kp C             &kp D   &kp V        &kp Z            &kp K           &kp H        &kp COMMA  &kp DOT            &kp SLASH          &trans
+                                            &trans  &lt 1 SPACE  &mt LCTRL TAB    &sk LEFT_SHIFT  &lt 2 ENTER  &trans
             >;
         };
 
@@ -140,10 +151,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&bt BT_CLR_ALL  &kp F1        &kp F2        &kp F3         &kp F4          &kp INS            &kp HOME  &kp PAGE_DOWN   &kp PG_UP        &kp END    &none  &none
-&bt BT_SEL 0    &hmr LGUI F5  &hmr LALT F6  &hmr LCTRL F7  &hmr LSHIFT F8  &kp PRINTSCREEN    &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &none  &none
-&bt BT_SEL 1    &kp F9        &kp F10       &kp F11        &kp F12         &none              &none     &kp C_VOL_DN    &kp C_VOLUME_UP  &none      &none  &none
-                                            &trans         &trans          &trans             &trans    &trans          &trans
+&trans  &kp F1        &kp F2        &kp F3         &kp F4          &kp INS            &kp HOME  &kp PAGE_DOWN   &kp PG_UP        &kp END    &bt BT_CLR_ALL  &none
+&trans  &hmr LGUI F5  &hmr LALT F6  &hmr LCTRL F7  &hmr LSHIFT F8  &kp PRINTSCREEN    &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &bt BT_SEL 0    &none
+&trans  &kp F9        &kp F10       &kp F11        &kp F12         &none              &none     &kp C_VOL_DN    &kp C_VOLUME_UP  &none      &bt BT_SEL 1    &none
+                                    &trans         &trans          &trans             &trans    &trans          &trans
             >;
         };
 
@@ -155,14 +166,14 @@
                            &trans     &trans     &trans    &trans          &trans          &trans
             >;
         };
+    };
 
-        Colemak_dh_rs {
-            bindings = <
-&trans  &kp Q             &kp W             &kp F          &kp P        &kp B              &kp J         &kp L        &kp U               &kp Y              &kp SINGLE_QUOTE   &td_quotes
-&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT S  &hmr LCTRL R   &kp T        &kp G              &kp M         &kp N        &kp E               &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
-&to 0   &kp X             &kp C             &kp D          &kp V        &kp Z              &kp K         &kp H        &kp COMMA           &kp DOT            &kp SLASH          &tog 3
-                                            &mt LCTRL TAB  &lt 1 SPACE  &lt 2 BACKSPACE    &lt 3 DELETE  &lt 1 ENTER  &shft RSHFT RSHIFT
-            >;
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        l_mouse {
+            if-layers = <2 1>;
+            then-layer = <3>;
         };
     };
 };
