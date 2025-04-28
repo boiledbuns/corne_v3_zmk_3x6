@@ -113,10 +113,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &mt TILDE GRAVE    &kp POUND                 &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp ASTERISK    &kp PLUS   &kp N7                  &kp N8        &kp N9               &kp AMPERSAND  &trans
-&trans  &hmr LGUI AT_SIGN  &hmr LEFT_ALT UNDERSCORE  &hmr LEFT_CONTROL LEFT_PARENTHESIS  &hmr LEFT_SHIFT RIGHT_PARENTHESIS  &kp DOLLAR      &kp MINUS  &kp NUMBER_4            &kp NUMBER_5  &kp NUMBER_6         &kp PIPE       &trans
-&trans  &kp CARET          &kp EXCLAMATION           &kp LEFT_BRACKET                    &kp RIGHT_BRACKET                  &kp PERCENT     &kp EQUAL  &kp NUMBER_1            &kp NUMBER_2  &mt PERIOD NUMBER_3  &kp BACKSLASH  &trans
-                                                     &trans                              &trans                             &trans          &trans     &mt RCTRL GREATER_THAN  &kp N0
+&trans  &mt TILDE GRAVE    &kp POUND                 &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp ASTERISK    &kp PLUS                &kp N7        &kp N8        &kp N9               &kp AMPERSAND     &trans
+&trans  &hmr LGUI AT_SIGN  &hmr LEFT_ALT UNDERSCORE  &hmr LEFT_CONTROL LEFT_PARENTHESIS  &hmr LEFT_SHIFT RIGHT_PARENTHESIS  &kp DOLLAR      &kp MINUS               &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6         &kp PIPE          &trans
+&trans  &kp CARET          &kp EXCLAMATION           &kp LEFT_BRACKET                    &kp RIGHT_BRACKET                  &kp PERCENT     &kp EQUAL               &kp NUMBER_1  &kp NUMBER_2  &mt PERIOD NUMBER_3  &mt BACKSLASH N0  &trans
+                                                     &trans                              &trans                             &trans          &mt RCTRL GREATER_THAN  &trans        &kp N0
             >;
         };
 
