@@ -175,9 +175,6 @@ layers:
 combos:
 - p: [2, 3]
   k: $$mdi:keyboard-esc$$
-- p: [26, 27, 37]
-  k: '&m_arr'
-  l: [symnum]
 - p: [8, 9]
   k: {t: '$$mdi:backspace$$', type: backspace}
 - p: [32, 33]
@@ -188,5 +185,3 @@ combos:
   k: J
 - p: [21, 20]
   k: K
-- p: [16, 19]
-  k: {t: '$$mdi:keyboard-return$$', type: enter}
