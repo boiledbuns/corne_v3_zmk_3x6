@@ -84,7 +84,7 @@ layers:
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - '>'
+  - {t: '>', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '0', s: )}
   fn:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -179,9 +179,9 @@ combos:
   k: {t: '$$mdi:backspace$$', type: backspace}
 - p: [32, 33]
   k: $$mdi:backspace-reverse-outline$$
-- p: [25, 34]
-  k: {t: mouse, h: toggle}
 - p: [19, 20]
   k: J
+  l: [Colemak_dh]
 - p: [21, 20]
   k: K
+  l: [Colemak_dh]
