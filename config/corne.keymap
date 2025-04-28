@@ -48,6 +48,16 @@
 
             tapping-term-ms = <250>;
         };
+
+        sk_quick: sk_quick {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SK_QUICK";
+            bindings = <&sk>;
+            #binding-cells = <1>;
+            ignore-modifiers;
+            release-after-ms = <3000>;
+            quick-release;
+        };
     };
 
     combos {
@@ -68,19 +78,16 @@
             key-positions = <32 33>;
         };
 
-        ltg_mouse {
-            bindings = <&tog 3>;
-            key-positions = <25 34>;
-        };
-
         vim_j {
             bindings = <&kp J>;
             key-positions = <19 20>;
+            layers = <0>;
         };
 
         vim_k {
             bindings = <&kp K>;
             key-positions = <21 20>;
+            layers = <0>;
         };
     };
 
@@ -89,10 +96,10 @@
 
         Colemak_dh {
             bindings = <
-&trans  &kp Q             &kp W             &kp F   &kp P        &kp B            &kp J           &kp L        &kp U      &kp Y              &td_quotes         &trans
-&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT R  &kp S   &kp T        &kp G            &kp M           &kp N        &kp E      &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
-&trans  &kp X             &kp C             &kp D   &kp V        &kp Z            &kp K           &kp H        &kp COMMA  &kp DOT            &kp SLASH          &trans
-                                            &trans  &lt 1 SPACE  &mt LCTRL TAB    &sk LEFT_SHIFT  &lt 2 ENTER  &trans
+&trans  &kp Q             &kp W             &kp F   &kp P        &kp B            &kp J                 &kp L        &kp U      &kp Y              &td_quotes         &trans
+&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT R  &kp S   &kp T        &kp G            &kp M                 &kp N        &kp E      &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
+&trans  &kp X             &kp C             &kp D   &kp V        &kp Z            &kp K                 &kp H        &kp COMMA  &kp DOT            &kp SLASH          &trans
+                                            &trans  &lt 1 SPACE  &mt LCTRL TAB    &sk_quick LEFT_SHIFT  &lt 2 ENTER  &trans
             >;
         };
 
@@ -106,10 +113,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &mt TILDE GRAVE    &kp POUND                 &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp ASTERISK    &kp PLUS   &kp N7            &kp N8        &kp N9               &kp AMPERSAND  &trans
-&trans  &hmr LGUI AT_SIGN  &hmr LEFT_ALT UNDERSCORE  &hmr LEFT_CONTROL LEFT_PARENTHESIS  &hmr LEFT_SHIFT RIGHT_PARENTHESIS  &kp DOLLAR      &kp MINUS  &kp NUMBER_4      &kp NUMBER_5  &kp NUMBER_6         &kp PIPE       &trans
-&trans  &kp CARET          &kp EXCLAMATION           &kp LEFT_BRACKET                    &kp RIGHT_BRACKET                  &kp PERCENT     &kp EQUAL  &kp NUMBER_1      &kp NUMBER_2  &mt PERIOD NUMBER_3  &kp BACKSLASH  &trans
-                                                     &trans                              &trans                             &trans          &trans     &kp GREATER_THAN  &kp N0
+&trans  &mt TILDE GRAVE    &kp POUND                 &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp ASTERISK    &kp PLUS   &kp N7                  &kp N8        &kp N9               &kp AMPERSAND  &trans
+&trans  &hmr LGUI AT_SIGN  &hmr LEFT_ALT UNDERSCORE  &hmr LEFT_CONTROL LEFT_PARENTHESIS  &hmr LEFT_SHIFT RIGHT_PARENTHESIS  &kp DOLLAR      &kp MINUS  &kp NUMBER_4            &kp NUMBER_5  &kp NUMBER_6         &kp PIPE       &trans
+&trans  &kp CARET          &kp EXCLAMATION           &kp LEFT_BRACKET                    &kp RIGHT_BRACKET                  &kp PERCENT     &kp EQUAL  &kp NUMBER_1            &kp NUMBER_2  &mt PERIOD NUMBER_3  &kp BACKSLASH  &trans
+                                                     &trans                              &trans                             &trans          &trans     &mt RCTRL GREATER_THAN  &kp N0
             >;
         };
 
@@ -144,6 +151,11 @@
         compatible = "zmk,conditional-layers";
 
         l_mouse {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+
+        l_mouse2 {
             if-layers = <2 1>;
             then-layer = <3>;
         };
