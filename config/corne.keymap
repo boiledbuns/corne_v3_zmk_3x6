@@ -22,21 +22,21 @@
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
             label = "HMR";
-            bindings = <&sk_quick>, <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <175>;
-            quick-tap-ms = <150>;
-            flavor = "balanced";
+            quick-tap-ms = <175>;
+            flavor = "tap-preferred";
         };
 
         hmrs: hmrs {
             compatible = "zmk,behavior-hold-tap";
             label = "HMRS";
-            bindings = <&sk_quick>, <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
         };
 
@@ -76,18 +76,6 @@
         Delete {
             bindings = <&kp DELETE>;
             key-positions = <32 33>;
-        };
-
-        vim_j {
-            bindings = <&kp J>;
-            key-positions = <19 20>;
-            layers = <0>;
-        };
-
-        vim_k {
-            bindings = <&kp K>;
-            key-positions = <21 20>;
-            layers = <0>;
         };
     };
 
