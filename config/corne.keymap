@@ -87,7 +87,7 @@
 &trans  &kp Q             &kp W             &kp F         &kp P          &kp B            &kp J                 &kp L          &kp U                 &kp Y              &td_quotes         &trans
 &trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT R  &hmr LCTRL S  &hmr LSHIFT T  &kp G            &kp M                 &hmr RSHIFT N  &hmr RIGHT_CONTROL E  &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
 &trans  &kp X             &kp C             &kp D         &kp V          &kp Z            &kp K                 &kp H          &kp COMMA             &kp DOT            &kp SLASH          &trans
-                                            &trans        &lt 1 SPACE    &mt LCTRL TAB    &sk_quick LEFT_SHIFT  &lt 2 ENTER    &trans
+                                            &tog 4        &lt 1 SPACE    &mt LCTRL TAB    &sk_quick LEFT_SHIFT  &lt 2 ENTER    &tog 5
             >;
         };
 
@@ -131,6 +131,24 @@
 &trans  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans     &trans     &trans     &trans    &trans          &trans          &trans        &trans           &trans  &trans
                            &trans     &trans     &trans    &trans          &trans          &trans
+            >;
+        };
+
+        colemak_dh_rs {
+            bindings = <
+&trans  &kp Q             &kp W             &kp F         &kp P          &kp B            &kp J                 &kp L          &kp U                 &kp Y              &td_quotes         &trans
+&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT S  &hmr LCTRL R  &hmr LSHIFT T  &kp G            &kp M                 &hmr RSHIFT N  &hmr RIGHT_CONTROL E  &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
+&trans  &kp X             &kp C             &kp D         &kp V          &kp Z            &kp K                 &kp H          &kp COMMA             &kp DOT            &kp SLASH          &trans
+                                            &trans        &lt 1 SPACE    &mt LCTRL TAB    &sk_quick LEFT_SHIFT  &lt 2 ENTER    &trans
+            >;
+        };
+
+        colemak {
+            bindings = <
+&trans  &kp Q             &kp W             &kp F         &kp P          &kp G            &kp J                 &kp L          &kp U                 &kp Y              &td_quotes         &trans
+&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT R  &hmr LCTRL S  &hmr LSHIFT T  &kp D            &kp H                 &hmr RSHIFT N  &hmr RIGHT_CONTROL E  &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
+&trans  &kp Z             &kp X             &kp C         &kp V          &kp B            &kp K                 &kp M          &kp COMMA             &kp DOT            &kp SLASH          &trans
+                                            &tog 4        &lt 1 SPACE    &mt LCTRL TAB    &sk_quick LEFT_SHIFT  &lt 2 ENTER    &trans
             >;
         };
     };
