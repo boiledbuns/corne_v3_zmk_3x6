@@ -44,19 +44,19 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_QUOTES";
             #binding-cells = <0>;
-            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>, <&kp GRAVE>;
+            bindings = <&kp SINGLE_QUOTE>, <&kp DOUBLE_QUOTES>;
 
-            tapping-term-ms = <250>;
+            tapping-term-ms = <150>;
         };
 
-        sk_quick: sk_quick {
-            compatible = "zmk,behavior-sticky-key";
-            label = "SK_QUICK";
-            bindings = <&sk>;
-            #binding-cells = <1>;
-            ignore-modifiers;
-            release-after-ms = <3000>;
-            quick-release;
+        hold_arrow: hold_arrow {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_ARROW";
+            bindings = <&arrow>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -79,15 +79,24 @@
         };
     };
 
+    macros {
+        arrow: arr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp EQUAL &kp GT>;
+            label = "ARR";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         Colemak_dh {
             bindings = <
-&trans  &kp Q             &kp W             &kp F         &kp P          &kp B            &kp J                 &kp L          &kp U                 &kp Y              &td_quotes         &trans
-&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT R  &hmr LCTRL S  &hmr LSHIFT T  &kp G            &kp M                 &hmr RSHIFT N  &hmr RIGHT_CONTROL E  &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
-&trans  &kp X             &kp C             &kp D         &kp V          &kp Z            &kp K                 &kp H          &kp COMMA             &kp DOT            &kp SLASH          &trans
-                                            &tog 4        &lt 1 SPACE    &mt LCTRL TAB    &sk_quick LEFT_SHIFT  &lt 2 ENTER    &tog 5
+&trans  &kp Q             &kp W             &kp F         &kp P          &kp B            &kp J          &kp L          &kp U                 &kp Y              &td_quotes         &trans
+&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT R  &hmr LCTRL S  &hmr LSHIFT T  &kp G            &kp M          &hmr RSHIFT N  &hmr RIGHT_CONTROL E  &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
+&trans  &kp X             &kp C             &kp D         &kp V          &kp Z            &kp K          &kp H          &kp COMMA             &kp DOT            &kp SLASH          &trans
+                                            &trans        &lt 1 SPACE    &mt LCTRL TAB    &kp BACKSPACE  &lt 2 ENTER    &trans
             >;
         };
 
@@ -101,10 +110,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &mt TILDE GRAVE     &kp POUND                  &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp ASTERISK    &kp PLUS                &kp N7        &kp N8        &kp N9               &kp AMPERSAND     &trans
-&trans  &hmrs LGUI AT_SIGN  &hmrs LEFT_ALT UNDERSCORE  &hmr LEFT_CONTROL LEFT_PARENTHESIS  &hmr LEFT_SHIFT RIGHT_PARENTHESIS  &kp DOLLAR      &kp MINUS               &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6         &kp PIPE          &trans
-&trans  &kp CARET           &kp EXCLAMATION            &kp LEFT_BRACKET                    &kp RIGHT_BRACKET                  &kp PERCENT     &kp EQUAL               &kp NUMBER_1  &kp NUMBER_2  &mt PERIOD NUMBER_3  &mt BACKSLASH N0  &trans
-                                                       &trans                              &trans                             &trans          &mt RCTRL GREATER_THAN  &trans        &kp N0
+&trans  &mt TILDE GRAVE     &kp POUND                  &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp ASTERISK    &kp PLUS             &kp N7        &kp N8        &kp N9               &kp AMPERSAND  &trans
+&trans  &hmrs LGUI AT_SIGN  &hmrs LEFT_ALT UNDERSCORE  &hmr LEFT_CONTROL LEFT_PARENTHESIS  &hmr LEFT_SHIFT RIGHT_PARENTHESIS  &kp DOLLAR      &kp MINUS            &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6         &kp PIPE       &trans
+&trans  &kp CARET           &kp EXCLAMATION            &kp LEFT_BRACKET                    &kp RIGHT_BRACKET                  &kp PERCENT     &hold_arrow 0 EQUAL  &kp NUMBER_1  &kp NUMBER_2  &mt PERIOD NUMBER_3  &kp BACKSLASH  &trans
+                                                       &trans                              &trans                             &trans          &trans               &kp N0        &trans
             >;
         };
 
@@ -131,24 +140,6 @@
 &trans  &trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans     &trans     &trans     &trans    &trans          &trans          &trans        &trans           &trans  &trans
                            &trans     &trans     &trans    &trans          &trans          &trans
-            >;
-        };
-
-        colemak_dh_rs {
-            bindings = <
-&trans  &kp Q             &kp W             &kp F         &kp P          &kp B            &kp J                 &kp L          &kp U                 &kp Y              &td_quotes         &trans
-&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT S  &hmr LCTRL R  &hmr LSHIFT T  &kp G            &kp M                 &hmr RSHIFT N  &hmr RIGHT_CONTROL E  &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
-&trans  &kp X             &kp C             &kp D         &kp V          &kp Z            &kp K                 &kp H          &kp COMMA             &kp DOT            &kp SLASH          &trans
-                                            &trans        &lt 1 SPACE    &mt LCTRL TAB    &sk_quick LEFT_SHIFT  &lt 2 ENTER    &trans
-            >;
-        };
-
-        colemak {
-            bindings = <
-&trans  &kp Q             &kp W             &kp F         &kp P          &kp G            &kp J                 &kp L          &kp U                 &kp Y              &td_quotes         &trans
-&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT R  &hmr LCTRL S  &hmr LSHIFT T  &kp D            &kp H                 &hmr RSHIFT N  &hmr RIGHT_CONTROL E  &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
-&trans  &kp Z             &kp X             &kp C         &kp V          &kp B            &kp K                 &kp M          &kp COMMA             &kp DOT            &kp SLASH          &trans
-                                            &tog 4        &lt 1 SPACE    &mt LCTRL TAB    &sk_quick LEFT_SHIFT  &lt 2 ENTER    &trans
             >;
         };
     };
