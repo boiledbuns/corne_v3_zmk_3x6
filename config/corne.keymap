@@ -70,7 +70,7 @@
         Bksps {
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
-            layers = <0>;
+            layers = <2>;
         };
 
         Delete {
@@ -91,12 +91,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Colemak_dh {
+        qwerty {
             bindings = <
-&trans  &kp Q             &kp W             &kp F         &kp P          &kp B             &kp J                       &kp L          &kp U                 &kp Y              &td_quotes         &trans
-&tog 3  &hmrs LEFT_GUI A  &hmrs LEFT_ALT R  &hmr LCTRL S  &hmr LSHIFT T  &kp G             &kp M                       &hmr RSHIFT N  &hmr RIGHT_CONTROL E  &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
-&to 3   &kp X             &kp C             &kp D         &kp V          &kp Z             &kp K                       &kp H          &kp COMMA             &kp DOT            &kp SLASH          &tog 3
-                                            &trans        &lt 1 SPACE    &hmr LCTRL TAB    &hmr RIGHT_SHIFT BACKSPACE  &lt 2 ENTER    &to 3
+&trans  &kp Q             &kp W             &kp E                &kp R              &kp T             &kp Y                       &kp U               &kp I                    &kp O                   &kp P      &trans
+&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT S  &hmr LEFT_CONTROL D  &hmr LEFT_SHIFT F  &kp G             &kp H                       &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K     &hmrs RIGHT_ALT L       &kp SEMI   &trans
+&trans  &kp Z             &kp X             &kp C                &kp V              &kp B             &kp N                       &kp M               &hmr SINGLE_QUOTE COMMA  &hmr DOUBLE_QUOTES DOT  &kp SLASH  &to 3
+                                            &to 1                &lt 1 SPACE        &hmr LCTRL TAB    &hmr RIGHT_SHIFT BACKSPACE  &lt 2 ENTER         &to 2
             >;
         };
 
@@ -113,7 +113,7 @@
 &trans  &mt TILDE GRAVE     &kp POUND                  &kp LEFT_BRACE                      &kp RIGHT_BRACE                    &kp ASTERISK    &kp PLUS             &kp N7        &kp N8        &kp N9               &kp AMPERSAND  &trans
 &trans  &hmrs LGUI AT_SIGN  &hmrs LEFT_ALT UNDERSCORE  &hmr LEFT_CONTROL LEFT_PARENTHESIS  &hmr LEFT_SHIFT RIGHT_PARENTHESIS  &kp DOLLAR      &kp MINUS            &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6         &kp PIPE       &trans
 &trans  &kp CARET           &kp EXCLAMATION            &kp LEFT_BRACKET                    &kp RIGHT_BRACKET                  &kp PERCENT     &hold_arrow 0 EQUAL  &kp NUMBER_1  &kp NUMBER_2  &mt PERIOD NUMBER_3  &kp BACKSLASH  &trans
-                                                       &trans                              &trans                             &trans          &trans               &kp N0        &trans
+                                                       &trans                              &to 0                              &trans          &trans               &kp N0        &trans
             >;
         };
 
@@ -130,16 +130,16 @@
 &trans  &kp F1         &kp F2         &kp F3         &kp F4          &kp INS            &kp HOME  &kp PAGE_DOWN   &kp PG_UP        &kp END    &bt BT_CLR_ALL  &none
 &trans  &hmrs LGUI F5  &hmrs LALT F6  &hmr LCTRL F7  &hmr LSHIFT F8  &kp PRINTSCREEN    &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT  &bt BT_SEL 0    &none
 &trans  &kp F9         &kp F10        &kp F11        &kp F12         &none              &none     &kp C_VOL_DN    &kp C_VOLUME_UP  &none      &bt BT_SEL 1    &none
-                                      &trans         &trans          &trans             &trans    &trans          &trans
+                                      &trans         &to 0           &trans             &trans    &trans          &trans
             >;
         };
 
-        qwerty {
+        Colemak_dh {
             bindings = <
-&trans  &kp Q             &kp W             &kp E                &kp R              &kp T             &kp Y                       &kp U               &kp I                    &kp O                   &kp P      &trans
-&none   &hmrs LEFT_GUI A  &hmrs LEFT_ALT S  &hmr LEFT_CONTROL D  &hmr LEFT_SHIFT F  &kp G             &kp H                       &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K     &hmrs RIGHT_ALT L       &kp SEMI   &trans
-&none   &kp Z             &kp X             &kp C                &kp V              &kp B             &kp N                       &kp M               &hmr SINGLE_QUOTE COMMA  &hmr DOUBLE_QUOTES DOT  &kp SLASH  &trans
-                                            &trans               &lt 1 SPACE        &hmr LCTRL TAB    &hmr RIGHT_SHIFT BACKSPACE  &lt 2 ENTER         &to 0
+&trans  &kp Q             &kp W             &kp F         &kp P          &kp B             &kp J                       &kp L          &kp U                 &kp Y              &td_quotes         &to 0
+&trans  &hmrs LEFT_GUI A  &hmrs LEFT_ALT R  &hmr LCTRL S  &hmr LSHIFT T  &kp G             &kp M                       &hmr RSHIFT N  &hmr RIGHT_CONTROL E  &hmrs RIGHT_ALT I  &hmrs SEMICOLON O  &trans
+&trans  &kp X             &kp C             &kp D         &kp V          &kp Z             &kp K                       &kp H          &kp COMMA             &kp DOT            &kp SLASH          &trans
+                                            &trans        &lt 1 SPACE    &hmr LCTRL TAB    &hmr RIGHT_SHIFT BACKSPACE  &lt 2 ENTER    &trans
             >;
         };
     };
