@@ -33,7 +33,7 @@ layers:
   - Z
   - K
   - H
-  - {t: ',', h: Sft+;, s: <}
+  - {t: ',', h: ;, s: <}
   - {t: ., h: ':', s: '>'}
   - '&td_quotes'
   - {t: '$$mdi:transfer$$', type: trans}
