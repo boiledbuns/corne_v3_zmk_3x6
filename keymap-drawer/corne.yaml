@@ -3,7 +3,7 @@ layers:
   Colemak_dh:
   - {t: '$$mdi:transfer$$', type: trans}
   - Q
-  - D
+  - W
   - F
   - P
   - B
@@ -11,7 +11,7 @@ layers:
   - L
   - U
   - Y
-  - {t: /, s: '?'}
+  - {t: '''', s: '"'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: A, h: '$$mdi:apple-keyboard-command$$'}
@@ -26,16 +26,16 @@ layers:
   - O
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - X
-  - {t: C, h: Ctl+C}
-  - W
-  - {t: V, h: Ctl+V}
   - Z
+  - X
+  - C
+  - D
+  - V
   - K
   - H
   - {t: ',', h: ;, s: <}
   - {t: ., h: ':', s: '>'}
-  - '&td_quotes'
+  - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: symnum, h: toggle}
   - {t: '$$mdi:keyboard-space$$', h: symnum}
