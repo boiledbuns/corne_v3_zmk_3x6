@@ -38,10 +38,10 @@ layers:
   - {t: '?', s: '!'}
   - $$mdi:apple-keyboard-shift$$
   - FUNCTION
-  - {t: '$$mdi:keyboard-space$$', h: NUM/NAV}
+  - {t: '$$mdi:backspace$$', h: NUM/NAV}
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', h: SYMBOLS}
+  - {t: '$$mdi:keyboard-space$$', h: SYMBOLS}
   - FUNCTION
   NUM/NAV:
   - {t: '$$mdi:transfer$$', type: trans}
