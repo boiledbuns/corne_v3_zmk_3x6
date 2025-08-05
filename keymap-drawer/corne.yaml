@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne, layout_name: default_transform}
 layers:
   QWERTY:
-  - $$mdi:keyboard-tab$$
+  - $$mdi:keyboard-esc$$
   - Q
   - W
   - E
@@ -13,7 +13,7 @@ layers:
   - O
   - P
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$'}
-  - $$mdi:keyboard-esc$$
+  - $$mdi:keyboard-tab$$
   - {t: A, h: LGUI}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: D, h: '$$mdi:apple-keyboard-control$$'}
