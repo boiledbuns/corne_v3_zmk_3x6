@@ -23,7 +23,7 @@
             label = "HOMEROW_MODS_LEFT";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <225>;
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;
@@ -35,7 +35,7 @@
             label = "HOMEROW_MODS_RIGHT";
             bindings = <&kp>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <225>;
             quick-tap-ms = <175>;
             flavor = "balanced";
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;
@@ -48,7 +48,7 @@
             label = "LAYER_TAP_SPACE";
             bindings = <&mo>, <&kp>;
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <225>;
             flavor = "balanced";
         };
 
@@ -181,9 +181,9 @@
             display-name = "QWERTY";
             bindings = <
             //┌────────┬────────┬────────┬────────┬────────┬────────┐   ┌────────┬────────┬────────┬────────┬────────┬────────┐
-               &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T        &kp Y    &kp U    &kp I    &kp O    &kp P    &bspc_del
+               &kp ESC    &kp Q    &kp W    &kp E    &kp R    &kp T        &kp Y    &kp U    &kp I    &kp O    &kp P    &bspc_del
             //├────────┼────────┼────────┼────────┼────────┼────────┤   ├────────┼────────┼────────┼────────┼────────┼────────┤
-               &kp ESC   &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G    &kp H    &hmr RSHFT J &hmr RCTRL K &hmr RALT L &hmr RGUI SEMI &kp SQT
+               &kp TAB   &hml LGUI A &hml LALT S &hml LCTRL D &hml LSHFT F &kp G    &kp H    &hmr RSHFT J &hmr RCTRL K &hmr RALT L &hmr RGUI SEMI &kp SQT
             //├────────┼────────┼────────┼────────┼────────┼────────┤   ├────────┼────────┼────────┼────────┼────────┼────────┤
                &kp LSHFT &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M    &comma_semi &dot_colon &qexcl   &kp RSHFT
             //╰────────┴────────┴────────┼────────┼────────┼────────┤   ├────────┼────────┼────────┼────────┴────────┴────────╯
